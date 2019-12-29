@@ -1,0 +1,13 @@
+/**
+*重写样式
+*/
+.aside-container {z-index: 999 !important; }
+.topnavbar-wrapper {padding-left: 90px; background-color: #ffffff}
+.topnavbar {background-color: #ffffff; background-image: none; background-repeat: repeat-x;}
+.topnavbar .navbar-nav > .nav-item > .nav-link { color: #656565 }
+.topnavbar .navbar-nav > .nav-item.show > .nav-link  { color: #2b957a }
+.wrapper .aside-container, .sidebar { background-color: #2b957a; background-image: linear-gradient(to bottom,#2b957a 0%, #37bc9b 100%); }
+.sidebar-nav > li > a, .sidebar-nav > li > .nav-item { color: #ffffff }
+/**
+*
+*/

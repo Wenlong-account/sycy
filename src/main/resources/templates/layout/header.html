@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <header th:fragment="header" class="topnavbar-wrapper border-bottom">
+            <!-- START Top Navbar-->
+            <nav class="navbar topnavbar">
+
+                <div class="navbar-header text-left pl-3"  style="width:300px">
+                    <strong>松阳茶叶溯源交易平台</strong><small>【商家版】</small>
+                </div>
+
+
+                <ul class="nav navbar-nav mr-auto flex-row justify-content-center" style="flex:1">
+                    <li class="nav-item show">
+                        <a class="nav-link active" href="#">茶青购进</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">茶叶购进</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">茶叶销售</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-row justify-content-end" style="width:300px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <em class="icon-refresh"></em>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="lock.html" title="Lock screen"><em class="icon-lock"></em></a></li>
+                    <!-- Fullscreen (only desktops)-->
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="#" data-toggle-fullscreen="">
+                            <em class="fas fa-expand"></em>
+                        </a>
+                    </li>
+                    <!-- START Alert menu-->
+                    <li class="nav-item dropdown dropdown-list">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
+                            <em class="icon-bell"></em>
+                            <span class="badge badge-danger">11</span>
+                        </a>
+                        <!-- START Dropdown menu-->
+                        <div class="dropdown-menu dropdown-menu-right animated flipInX">
+                            <div class="dropdown-item">
+                                <!-- START list group-->
+                                <div class="list-group">
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fab fa-twitter fa-2x text-info"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">New followers</p>
+                                                <p class="m-0 text-muted text-sm">1 new follower</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fas fa-envelope fa-2x text-warning"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">New e-mails</p>
+                                                <p class="m-0 text-muted text-sm">You have 10 new emails</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fas fa-tasks fa-2x text-success"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">Pending Tasks</p>
+                                                <p class="m-0 text-muted text-sm">11 pending task</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- last list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center">
+                                            <span class="text-sm">More notifications</span>
+                                            <span class="badge badge-danger ml-auto">14</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- END list group-->
+                            </div>
+                        </div>
+                        <!-- END Dropdown menu-->
+                    </li>
+                    <!-- END Alert menu-->
+                    <!-- START Offsidebar button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
+                            <em class="icon-notebook"></em>
+                        </a>
+                    </li>
+                    <!-- END Offsidebar menu-->
+                </ul>
+                <!-- END Right Navbar-->
+                <!-- START Search form-->
+                <form class="navbar-form" role="search" action="search.html">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Type and hit enter ...">
+                        <div class="fas fa-times navbar-form-close" data-search-dismiss=""></div>
+                    </div>
+                    <button class="d-none" type="submit">Submit</button>
+                </form>
+                <!-- END Search form-->
+            </nav>
+            <!-- END Top Navbar-->
+        </header>
+
+
+
+    </body>
+</html>

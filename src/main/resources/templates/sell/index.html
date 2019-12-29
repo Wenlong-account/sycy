@@ -1,0 +1,221 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+    class=" bgpositionshorthand bgpositionxy bgrepeatround bgrepeatspace bgsizecover borderradius cssanimations csscalc csstransforms supports csstransforms3d preserve3d csstransitions no-flexboxtweener fontface svg svgasimg svgclippaths svgfilters svgforeignobject inlinesvg smil localstorage sessionstorage websqldatabase multiplebgs"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="stylesheet" th:href="@{/vendor/animate.css/animate.css}">
+    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/fontawesome.css}">
+    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/brands.css}">
+    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/regular.css}">
+    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/solid.css}">
+    <link rel="stylesheet" th:href="@{/vendor/simple-line-icons/css/simple-line-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/theme-f.css}">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <title>Document</title>
+</head>
+<body class="aside-hover  aside-collapsed layout-fixed aside-collapsed-text">
+
+<div class="wrapper" th:with="navActive='sell'">
+
+    <!-- top navbar-->
+    <div th:replace ="~{./layout/header :: header}"></div>
+
+    <!-- sidebar-->
+    <div th:replace ="~{./layout/aside :: aside}"></div>
+
+    <!--right side-->
+    <aside class="offsidebar" style="width: 500px">
+        <div class="card" style="margin-left:-2px">
+            <div class="card-header text-white bg-primary p-4">
+               <!-- <div class="float-right text-center">
+                    <em class="fa-3x icon-check mr-2"></em>
+                    <p>[交易成功]</p>
+                </div>-->
+                <h4>订单详情</h4>
+                <p>批次号：CG201908134875</p>
+            </div>
+            <div class="card-body">
+                <div class="col-lg-12 col-md-12">
+                    <p class="lead bb">用户信息</p>
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <div class="col-md-4">茶农:</div>
+                            <div class="col-md-8"><strong>陈小芳</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">手机号码:</div>
+                            <div class="col-md-8"><strong>1585715874</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">证件号码:</div>
+                            <div class="col-md-8"><strong> 332528196911131423  </strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">住 址:</div>
+                            <div class="col-md-8"><strong>浙江省松阳县赤寿乡卯山后村64号 </strong></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <p class="lead bb">交易信息</p>
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <div class="col-md-4">茶叶:</div>
+                            <div class="col-md-8"><strong>碧螺春茶青</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">交易方式:</div>
+                            <div class="col-md-8"><strong>自营</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">数量(斤):</div>
+                            <div class="col-md-8"><strong> 27 </strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">单价(元/斤):</div>
+                            <div class="col-md-8"><strong>10 </strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">总计:</div>
+                            <div class="col-md-8"><strong>1580.88元 </strong></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <p class="lead bb">支付信息</p>
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <div class="col-md-4">现金支付金额(元):</div>
+                            <div class="col-md-8"><strong>1000.00</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">转帐支付金额(元):</div>
+                            <div class="col-md-8"><strong>258.00</strong></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">贷款支付金额(元):</div>
+                            <div class="col-md-8"><strong>650.00</strong></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main section-->
+    <section class="section-container">
+
+        <!-- Page content-->
+        <div class="content-wrapper">
+            <div class="content-heading">
+                <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-square btn-secondary active">
+                                <input type="radio" name="options" id="option1" checked> 已交易
+                            </label>
+                            <label class="btn btn-square btn-secondary">
+                                <input type="radio" name="options" id="option2"> 已失败
+                            </label>
+                            <label class="btn btn-square btn-secondary">
+                                <input type="radio" name="options" id="option3"> 已取消
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="茶农姓名/证件号/批次号">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" id="button-addon2"><i class=" fa fa-search"></i> 搜索</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 text-right">
+                        <button class="btn btn-square btn-secondary mr-2">筛选</button>
+                        <button class="btn btn-square btn-success"><i class=" fa fa-plus"></i>  新增</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- START card-->
+            <div class="card">
+                <!-- START table-responsive-->
+                <div class="table-responsive">
+                    <table class="table  table-hover">
+                        <thead>
+                            <tr>
+                                <th>批次号</th>
+                                <th>茶农</th>
+                                <th>茶叶(元)</th>
+                                <th>单价(元)</th>
+                                <th>数量(元)</th>
+                                <th>总价(元)</th>
+                                <th>已付款</th>
+                                <th>交易时间</th>
+                            </tr>
+                        </thead>
+                        <tbody th:with="list=${new int[20]}">
+                            <tr th:each="item:${list}" data-toggle-state="offsidebar-open">
+                                <td>CG201908134875</td>
+                                <td>叶莲英</td>
+                                <td>碧螺春茶青</td>
+                                <td>12.0</td>
+                                <td>27.0</td>
+                                <td>274.00</td>
+                                <td > 274.00
+                                    <span class="badge badge-primary">现</span>
+                                    <span class="badge badge-success">转</span>
+                                    <span class="badge badge-danger">贷</span>
+                                </td>
+                                <td>2019-11-12 12-28-28</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- END table-responsive-->
+                <div class="card-footer">
+                    <div class="d-flex">
+                        <div>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="input-group float-right">
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option value="0">Bulk action</option>
+                                    <option value="1">Delete</option>
+                                    <option value="2">Clone</option>
+                                    <option value="3">Export</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</div>
+
+</body>
+<script th:src="@{/vendor/jquery/dist/jquery.js}"></script>
+<script th:src="@{/vendor/js-storage/js.storage.js}"></script>
+<script th:src="@{/vendor/popper.js/dist/umd/popper.js}"></script>
+<script th:src="@{/vendor/bootstrap/dist/js/bootstrap.js}"></script>
+<script th:src="@{/js/app.js}"></script>
+</html>
