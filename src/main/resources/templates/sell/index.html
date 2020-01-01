@@ -15,6 +15,7 @@
     <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/regular.css}">
     <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/solid.css}">
     <link rel="stylesheet" th:href="@{/vendor/simple-line-icons/css/simple-line-icons.css}">
+    <link rel="stylesheet" th:href="@{/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css}">
     <link rel="stylesheet" th:href="@{/css/theme-f.css}">
     <link rel="stylesheet" th:href="@{/css/custom.css}">
     <title>Document</title>
@@ -119,13 +120,13 @@
                     <div class="col-3">
                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-square btn-secondary active">
-                                <input type="radio" name="options" id="option1" checked> 已交易
+                                <input type="radio" name="options" id="option1" checked> 交易正常
                             </label>
                             <label class="btn btn-square btn-secondary">
-                                <input type="radio" name="options" id="option2"> 已失败
+                                <input type="radio" name="options" id="option2"> 交易异常
                             </label>
                             <label class="btn btn-square btn-secondary">
-                                <input type="radio" name="options" id="option3"> 已取消
+                                <input type="radio" name="options" id="option3"> 交易作废
                             </label>
                         </div>
                     </div>
@@ -138,7 +139,7 @@
                         </div>
                     </div>
                     <div class="col-3 text-right">
-                        <button class="btn btn-square btn-secondary mr-2">筛选</button>
+                        <button class="btn btn-square btn-secondary mr-2" data-toggle="modal" data-target="#filter-modal">筛选</button>
                         <button class="btn btn-square btn-success"><i class=" fa fa-plus"></i>  新增</button>
                     </div>
                 </div>
@@ -212,10 +213,98 @@
     </section>
 </div>
 
+<div class="modal fade" id="filter-modal" tabindex="-1" >
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" >筛选条件</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">交易状态</label>
+                        <div class="col-sm-10">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="option1" checked> 所有
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option2"> 交易正常
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 交易异常
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 交易作废
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">交易类型</label>
+                        <div class="col-sm-10">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="option1" checked> 所有
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option2"> 现金交易
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 转帐交易
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 贷款交易
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">交易日期</label>
+                        <div class="col-sm-10">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="option1" checked>近三天
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option2"> 本周
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 三十天内
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option3"> 本季
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 <script th:src="@{/vendor/jquery/dist/jquery.js}"></script>
 <script th:src="@{/vendor/js-storage/js.storage.js}"></script>
 <script th:src="@{/vendor/popper.js/dist/umd/popper.js}"></script>
 <script th:src="@{/vendor/bootstrap/dist/js/bootstrap.js}"></script>
+<script th:src="@{/vendor/datatables.net/js/jquery.dataTables.js}"></script>
+<script th:src="@{/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js}"></script>
 <script th:src="@{/js/app.js}"></script>
+<script th:inline="javascript" type="text/javascript">
+    var ctxPath = /*[[@{/}]]*/'';
+</script>
+<script>
+
+
+
+</script>
 </html>

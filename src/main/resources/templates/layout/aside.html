@@ -45,9 +45,9 @@
 
                         </li>
                         <li class="" th:classappend="${navActive=='sell' }?'active'">
-                            <a href="widgets.html" title="Widgets">
+                            <a th:href="@{/demo/sell/index}" title="销售">
                                 <em class="icon-grid"></em>
-                                <span data-localize="sidebar.nav.WIDGETS">销售</span>
+                                <span>销售</span>
                             </a>
                         </li>
                         <li class=" ">
@@ -59,7 +59,7 @@
                         <li class=" ">
                             <a href="#forms" title="Forms" data-toggle="collapse">
                                 <em class="icon-note"></em>
-                                <span data-localize="sidebar.nav.form.FORM">客户</span>
+                                <span data-localize="sidebar.nav.form.FORM">库存</span>
                             </a>
                         </li>
                         <li class=" ">
