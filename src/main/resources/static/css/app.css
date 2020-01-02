@@ -60,7 +60,8 @@ body {
     margin-left: 0;
     z-index: 111;
     background-color: #f5f7fa;
-    margin-bottom: 60px !important; }
+    /*margin-bottom: 60px !important;*/
+  }
   .wrapper .footer-container {
     position: absolute;
     left: 0;
@@ -80,8 +81,10 @@ body {
 .content-wrapper {
   padding: 15px;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  margin-top: -1px; }
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  margin-top: -1px;
+  padding-bottom: 0 !important;
+}
   .content-wrapper .unwrap {
     margin: -15px; }
     @media (min-width: 768px) {
@@ -112,7 +115,7 @@ body {
       padding: 15px; }
       .content-wrapper .content-heading {
         margin: -20px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         padding: 20px; }
         .content-wrapper .content-heading button,
         .content-wrapper .content-heading .btn {

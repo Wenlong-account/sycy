@@ -1,185 +1,118 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html lang="zh_CN"
       xmlns:th="http://www.thymeleaf.org"
-    class=" bgpositionshorthand bgpositionxy bgrepeatround bgrepeatspace bgsizecover borderradius cssanimations csscalc csstransforms supports csstransforms3d preserve3d csstransitions no-flexboxtweener fontface svg svgasimg svgclippaths svgfilters svgforeignobject inlinesvg smil localstorage sessionstorage websqldatabase multiplebgs"
->
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/common/_layout}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
-    <link rel="stylesheet" th:href="@{/css/app.css}">
-    <link rel="stylesheet" th:href="@{/vendor/animate.css/animate.css}">
-    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/fontawesome.css}">
-    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/brands.css}">
-    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/regular.css}">
-    <link rel="stylesheet" th:href="@{/vendor/@fortawesome/fontawesome-free/css/solid.css}">
-    <link rel="stylesheet" th:href="@{/vendor/simple-line-icons/css/simple-line-icons.css}">
-    <link rel="stylesheet" th:href="@{/css/theme-f.css}">
-    <link rel="stylesheet" th:href="@{/css/custom.css}">
-    <title>首页</title>
+
+    <title>主页</title>
 </head>
-<body class="aside-hover  aside-collapsed layout-fixed aside-collapsed-text">
 
-    <div class="wrapper"  th:with="navActive='home'">
+<body  th:with="navActive='home'">
 
-        <!-- top navbar-->
-        <div th:replace ="~{layout/header :: header}"></div>
+<th:block layout:fragment="content">
 
-        <!-- sidebar-->
-        <div th:replace ="~{layout/aside :: aside}"></div>
-
-        <!-- Main section-->
-        <section class="section-container">
-            <div class="content-wrapper">
-                <div class="container container-md py-4">
-                    <div class="text-center pb-3">
-                        <div class="h2 text-bold">欢迎使用松阳茶叶溯源交易系统 <small>【商家版】</small></div>
-                        <div class="alert alert-info" role="alert">
-                            <em class="fa fa-bullhorn"></em> 平台通知：新版松阳茶叶溯源系统即将启用，balabalabala....
-                        </div>
+    <section class="section-container">
+        <div class="content-wrapper">
+            <div class="container container-md py-4">
+                <div class="text-center pb-3">
+                    <div class="h2 text-bold">欢迎使用松阳茶叶溯源交易系统 <small>【商家版】</small></div>
+                    <div class="alert alert-warning">
+                        <em class="fa fa-bullhorn"></em> 平台通知：新版松阳茶叶溯源系统即将启用，balabalabala....
                     </div>
                 </div>
+            </div>
 
-                <div class="container container-md">
+            <div class="container container-lg">
 
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <!-- START card-->
-                            <div class="card">
-                                <div class="half-float ie-fix-flex"><img class="img-fluid"  th:src="@{/img/bg3.jpg}" alt="">
-                                    <div class="half-float-bottom"><img class="img-thumbnail circle thumb128" th:src="@{/img/user/avatar.jpg}" alt="Image"></div>
-                                </div>
-                                <div class="card-body text-center">
-                                    <h3 class="mb-1">南娟茶叶商行</h3>
-                                    <p>电话：0571-56077609<br/>地址：浙江省杭州市文三路90号</p>
-                                </div>
-                                <div class="card-body text-center bg-gray-dark">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h3 class="m-0">256</h3>
-                                            <p class="m-0">我的客户</p>
-                                        </div>
-                                        <div class="col-4">
-                                            <h3 class="m-0">5487</h3>
-                                            <p class="m-0">订单总量</p>
-                                        </div>
-                                        <div class="col-4">
-                                            <h3 class="m-0">500</h3>
-                                            <p class="m-0">其他</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- END card-->
-                        </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <!-- START card-->
+                        <div class="card" style="padding-top: 1.4rem">
 
-                        <div class="col-xl-6">
-                            <!-- START card-->
-                            <div class="card">
-                                <div class="d-flex">
-                                    <div class="w-50 bb br px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-users fa-2x text-info"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">256kg</h4>
-                                                    <p class="mb-0 text-muted">库存</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="card-body text-center">
+                                <h3 class="mb-1">南娟茶叶商行</h3>
+                                <p>电话：0571-56077609<br/>地址：浙江省杭州市文三路90号</p>
+                            </div>
+                            <div class="card-body text-center bg-gray-dark">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h3 class="m-0">256</h3>
+                                        <p class="m-0">我的客户</p>
                                     </div>
-                                    <div class="w-50 bb px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-music fa-2x text-danger"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">1487元</h4>
-                                                    <p class="mb-0 text-muted">总销量</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <h3 class="m-0">5487</h3>
+                                        <p class="m-0">订单总量</p>
                                     </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="w-50 br px-3">
-                                        <div class="d-flex align-items-center"><em class="fas fa-code-branch fa-2x text-inverse"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">15</h4>
-                                                    <p class="mb-0 text-muted">今日顾客</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-50 px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-inbox fa-2x text-success"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">5687元</h4>
-                                                    <p class="mb-0 text-muted">今日销售</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- END card-->
-                            <!-- START card-->
-                            <div class="card">
-                                <div class="d-flex">
-                                    <div class="w-50 bb br px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-users fa-2x text-info"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">256kg</h4>
-                                                    <p class="mb-0 text-muted">库存</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-50 bb px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-music fa-2x text-danger"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">1487元</h4>
-                                                    <p class="mb-0 text-muted">总销量</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="w-50 br px-3">
-                                        <div class="d-flex align-items-center"><em class="fas fa-code-branch fa-2x text-inverse"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">15</h4>
-                                                    <p class="mb-0 text-muted">今日顾客</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-50 px-3">
-                                        <div class="d-flex align-items-center"><em class="fa fa-inbox fa-2x text-success"></em>
-                                            <div class="ml-auto">
-                                                <div class="card-body text-right">
-                                                    <h4 class="mt-0">5687元</h4>
-                                                    <p class="mb-0 text-muted">今日销售</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-4">
+                                        <h3 class="m-0">500</h3>
+                                        <p class="m-0">其他</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- END card-->
                     </div>
 
+                    <div class="col-xl-4">
+
+                        <div class="card flex-row align-items-center align-items-stretch">
+                            <div class="col-4 d-flex align-items-center bg-danger justify-content-center rounded-left">
+                                <div class="text-center">
+                                    <em class="fa fa-3x fa-cubes"></em>
+                                </div>
+                            </div>
+                            <div class="col-8 py-3 rounded-right">
+                                <div>今日销售额</div>
+                                <div class="h2 mt-0">4578 <small>.00</small></div>
+                            </div>
+                        </div>
+
+                        <div class="card flex-row align-items-center align-items-stretch">
+                            <div class="col-4 d-flex align-items-center bg-warning justify-content-center rounded-left">
+                                <div class="text-center">
+                                    <em class="fa fa-3x fa-cubes"></em>
+                                </div>
+                            </div>
+                            <div class="col-8 py-3 rounded-right">
+                                <div>今日销售额</div>
+                                <div class="h2 mt-0">4578 <span class="text-sm">.00</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-4">
+
+                        <div class="card flex-row align-items-center align-items-stretch">
+                            <div class="col-4 d-flex align-items-center bg-success justify-content-center rounded-left">
+                                <div class="text-center">
+                                    <em class="fa fa-3x fa-shopping-cart"></em>
+                                </div>
+                            </div>
+                            <div class="col-8 py-3 rounded-right">
+                                <div>当前库存(kg)</div>
+                                <div class="h2 mt-0">143.02 <small>.00</small></div>
+                            </div>
+                        </div>
+
+                        <div class="card flex-row align-items-center align-items-stretch">
+                            <div class="col-4 d-flex align-items-center bg-purple justify-content-center rounded-left">
+                                <div class="text-center">
+                                    <em class="fa fa-3x fa-cubes"></em>
+                                </div>
+                            </div>
+                            <div class="col-8 py-3 rounded-right">
+                                <div>其他</div>
+                                <div class="h2 mt-0">76 <span class="text-sm">.00</span></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+</th:block>
 
 </body>
-<script th:src="@{/vendor/jquery/dist/jquery.js}"></script>
-<script th:src="@{/vendor/js-storage/js.storage.js}"></script>
-<script th:src="@{/vendor/popper.js/dist/umd/popper.js}"></script>
-<script th:src="@{/vendor/bootstrap/dist/js/bootstrap.js}"></script>
-<script th:src="@{/js/app.js}"></script>
 </html>
